@@ -16,6 +16,7 @@ This repository is created to collect the final projects of the **Principles of 
 - Fuzzy Logic
 - Evolutionary Computation
 - Hybrid Intelligent Methods
+
 ****Note: get access to the presentation slidess through [this link.](http://alitourani.ir/downloadable-files/ "this link.")****
 
 ## Project Titles
