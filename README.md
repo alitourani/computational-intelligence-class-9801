@@ -20,7 +20,9 @@ This repository is created to collect the final projects of the **Principles of 
 ****Note: get access to the presentation slidess through [this link.](http://alitourani.ir/downloadable-files/ "this link.")****
 
 ## Project Titles
-To be defined soon!
+|   Group Name|Title |Members |
+| ------------ | ------------ | ------------ |
+| Sample |Sample|Sample|
 
 ## Implementation Environments
 Projects should be implemented using one of the below programming languages:
