@@ -39,7 +39,7 @@ This repository is created to collect the final projects of the **Principles of 
 | 15 | Implementation of a Reinforcement Learning Neural Network to recognize particular fruits | 950122680009, 950122680007, 950122680026, 950122681022 |
 | 16 | Implementation of a fuzzy model for Rescuer robots | 94122611002 |
 | 17 | N/A | 950122681016, 94012261103, 94012261101 |
-| 18 | N/A | 94012269022, 94122691003 |
+| 18 | System load-balance modeling based on Fuzzy logic | 94012269022, 94122691003 |
 | 19 | Simulation of network routing based on Ant Colony algorithm | 950122680005, 950122681009, 950122680017, 9312268145 |
 | 20 | N/A | 960122681010, 93122685000 |
 | 21 | Simulation of car braking system using a fuzzy model | 950122680088, 950122681020, 950122680024 |
