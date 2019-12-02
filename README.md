@@ -28,14 +28,14 @@ This repository is created to collect the final projects of the **Principles of 
 | 4 | An ANN to classify dogs and cats | 96122680001, 960122680040, 960122680004, 960122680085 |
 | 5 | Weather forecasting using ANNs | 950122680008, 950122680020, 950122681008 |
 | 6 | ADALINE Neural Network implementation | 950122680083, 950122680014 |
-| 7 | N/A | 960122681012, 960122610003, 9612268200, 950122610018 |
+| 7 | Employing Bat algorithm to solve an applicable issue | 960122681012, 960122610003, 9612268200, 950122610018 |
 | 8 | N/A | 960122680106, 9312268103 |
 | 9 | N/A | 94012269026, 9412261200, 94012269025 |
 | 10 | N/A | 950122680019, 950122680025, 950122681005, 950122680030, 950122680004 |
 | 11 | N/A | 95122615002, 9412261500, 94122611001, 9512268500 |
 | 12 | Using Genetic algorithm to model Chromosome collision | 94122681004 |
 | 13 | Prediction of stock market using Random Forest algorithm | 9312268122, 94012269030 |
-| 14 | N/A | 950122680080, 94122691005 |
+| 14 | Implementation of a scoring game based on Genetic algorithm | 950122680080, 94122691005 |
 | 15 | Implementation of a Reinforcement Learning Neural Network to recognize particular fruits | 950122680009, 950122680007, 950122680026, 950122681022 |
 | 16 | Implementation of a fuzzy model for Rescuer robots | 94122611002 |
 | 17 | N/A | 950122681016, 94012261103, 94012261101 |
