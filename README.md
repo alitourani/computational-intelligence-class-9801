@@ -43,7 +43,7 @@ This repository is created to collect the final projects of the **Principles of 
 | 19 | Simulation of network routing based on Ant Colony algorithm | 950122680005, 950122681009, 950122680017, 9312268145 |
 | 20 | N/A | 960122681010, 93122685000 |
 | 21 | Simulation of car braking system using a fuzzy model | 950122680088, 950122681020, 950122680024 |
-| 22 | N/A | 950122680063, 950122680078, 950122680035, 950122680029 |
+| 22 | A Color Palette application based on clustering structure | 950122680063, 950122680078, 950122680035, 950122680029 |
 | 23 | Implementation of a perceptron neural network to solve logical issues | 94012269029 |
 | 24 | N/A | 960122680019, 960122680022, 960122681012, 960122680117 |
 
