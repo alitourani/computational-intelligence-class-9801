@@ -25,7 +25,7 @@ This repository is created to collect the final projects of the **Principles of 
 | 1 | Implementation of an application based on Termite Colony Optimization algorithm | 960122680036, 960122681006, 9512268100, 960122680076 |
 | 2 | N/A | 950122680027, 950122680028, 950122680037, 950122681011 |
 | 3 | Implementation of Graph Coloring greedy algorithm | 960122680031, 960122681001, 960122680011 |
-| 4 | An ANN to classify dogs and cats | 96122680001, 960122680040, 960122680004, 960122680085 |
+| 4 | Transfer learning using CNN for classifying dogs and cats | 96122680001, 960122680040, 960122680004, 960122680085 |
 | 5 | Weather forecasting using ANNs | 950122680008, 950122680020, 950122681008 |
 | 6 | ADALINE Neural Network implementation | 950122680083, 950122680014 |
 | 7 | Employing Bat algorithm to solve an applicable issue | 960122681012, 960122610003, 9612268200, 950122610018 |
@@ -46,6 +46,7 @@ This repository is created to collect the final projects of the **Principles of 
 | 22 | A Color Palette application based on clustering structure | 950122680063, 950122680078, 950122680035, 950122680029 |
 | 23 | Implementation of a perceptron neural network to solve logical issues | 94012269029 |
 | 24 | N/A | 960122680019, 960122680022, 960122681012, 960122680117 |
+| 25 | N/A | 9512268200, 95122681001 |
 
 ## Implementation Environments
 Projects should be implemented using one of the below programming languages:
