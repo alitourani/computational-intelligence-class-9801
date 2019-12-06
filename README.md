@@ -31,7 +31,7 @@ This repository is created to collect the final projects of the **Principles of 
 | 7 | Employing Bat algorithm to solve an applicable issue | 960122681012, 960122610003, 9612268200, 950122610018 |
 | 8 | N/A | 960122680106, 9312268103 |
 | 9 | N/A | 94012269026, 9412261200, 94012269025 |
-| 10 | N/A | 950122680019, 950122680025, 950122681005, 950122680030, 950122680004 |
+| 10 | Handwriting recognition using ANN | 950122680019, 950122680025, 950122681005, 950122680030, 950122680004 |
 | 11 | N/A | 95122615002, 9412261500, 94122611001, 9512268500 |
 | 12 | Using Genetic algorithm to model Chromosome collision | 94122681004 |
 | 13 | Prediction of stock market using Random Forest algorithm | 9312268122, 94012269030 |
