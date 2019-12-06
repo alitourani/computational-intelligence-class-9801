@@ -17,7 +17,7 @@ This repository is created to collect the final projects of the **Principles of 
 - Evolutionary Computation
 - Hybrid Intelligent Methods
 
-****Note: get access to the presentation slidess through [this link.](http://alitourani.ir/downloadable-files/ "this link.")****
+****Note: get access to the presentation slides through [this link.](http://alitourani.ir/downloadable-files/ "this link.")****
 
 ## Project Titles
 | Group Name | Title | Team Members |
@@ -45,7 +45,7 @@ This repository is created to collect the final projects of the **Principles of 
 | 21 | Simulation of car braking system using a fuzzy model | 950122680088, 950122681020, 950122680024 |
 | 22 | A Color Palette application based on clustering structure | 950122680063, 950122680078, 950122680035, 950122680029 |
 | 23 | Implementation of a perceptron neural network to solve logical issues | 94012269029 |
-| 24 | N/A | 960122680019, 960122680022, 960122681012, 960122680117 |
+| 24 | Utilizng an ANN for Tic-Tac-Toe game | 960122680019, 960122680022, 960122681012, 960122680117 |
 | 25 | A fuzzy system to control light in smart homes | 9512268200, 95122681001 |
 
 ## Implementation Environments
