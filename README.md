@@ -38,7 +38,7 @@ This repository is created to collect the final projects of the **Principles of 
 | 14 | Implementation of a scoring game based on Genetic algorithm | 950122680080, 94122691005 |
 | 15 | Implementation of a Reinforcement Learning Neural Network to recognize particular fruits | 950122680009, 950122680007, 950122680026, 950122681022 |
 | 16 | Implementation of a fuzzy model for Rescuer robots | 94122611002 |
-| 17 | N/A | 950122681016, 94012261103, 94012261101 |
+| 17 | Human emotion detection by ANN | 950122681016, 94012261103, 94012261101 |
 | 18 | System load-balance modeling based on Fuzzy logic | 94012269022, 94122691003 |
 | 19 | Simulation of network routing based on Ant Colony algorithm | 950122680005, 950122681009, 950122680017, 9312268145 |
 | 20 | N/A | 960122681010, 93122685000 |
@@ -47,6 +47,7 @@ This repository is created to collect the final projects of the **Principles of 
 | 23 | Implementation of a perceptron neural network to solve logical issues | 94012269029 |
 | 24 | Utilizng an ANN for Tic-Tac-Toe game | 960122680019, 960122680022, 960122681012, 960122680117 |
 | 25 | A fuzzy system to control light in smart homes | 9512268200, 95122681001 |
+| 26 | N/A | 94012269015, 94012261011, 94012269023 |
 
 ## Implementation Environments
 Projects should be implemented using one of the below programming languages:
