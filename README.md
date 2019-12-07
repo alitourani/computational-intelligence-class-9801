@@ -23,7 +23,7 @@ This repository is created to collect the final projects of the **Principles of 
 | Group Name | Title | Team Members |
 | ------------ | ------------ | ------------ |
 | 1 | Implementation of an application based on Termite Colony Optimization algorithm | 960122680036, 960122681006, 9512268100, 960122680076 |
-| 2 | N/A | 950122680027, 950122680028, 950122680037, 950122681011 |
+| 2 | Real-time prediction of age and gender based on ANN | 950122680027, 950122680028, 950122680037, 950122681011 |
 | 3 | Implementation of Graph Coloring greedy algorithm | 960122680031, 960122681001, 960122680011 |
 | 4 | Transfer learning using CNN for classifying dogs and cats | 96122680001, 960122680040, 960122680004, 960122680085 |
 | 5 | Weather forecasting using ANNs | 950122680008, 950122680020, 950122681008 |
