@@ -1,8 +1,8 @@
-# Team Members:
-Names (Student Numbers)
-
 # Project Title:
 Utilizng an ANN for Tic-Tac-Toe game	
 
-# Descreption:
+## Team Members:
+Names (Student Numbers)
+
+## Descreption:
 To be Defined
