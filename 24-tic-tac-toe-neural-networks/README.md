@@ -1,5 +1,4 @@
-# Project Title:
-Utilizng an ANN for Tic-Tac-Toe game	
+# Utilizng an Artificial Neural Network for Tic-Tac-Toe Game
 
 ## Team Members:
 Names (Student Numbers)
