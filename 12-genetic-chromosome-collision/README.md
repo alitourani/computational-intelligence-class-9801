@@ -1,7 +1,8 @@
 # Using Genetic Algorithm to model Chromosome Collision
 
 ## Team Members:
-Names (Student Numbers)
+ (94122681004) محمدعلی الاشقر
+
 
 ## Descreption:
-To be Defined
+پروژه من مسیر یابی وساخت کروموزوم - الگوریتم ژنیتیک
