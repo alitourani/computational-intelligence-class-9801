@@ -8,94 +8,66 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.Timer;
 
 /**
  *
  * @author MA
  */    
-   public class p extends javax.swing.JPanel implements ActionListener,KeyListener{
+   public class p extends javax.swing.JPanel  implements ActionListener{
         //lebal 123=new lable("123");
-       int x=0,y=40*11,q,c,v;
+       int x=0,y=40*11,q,c,v,count_paint;
+       Timer t=new Timer(1, this);
        Random ran=new Random(); 
-       ArrayList Chromosome = new ArrayList(12);
+       ArrayList Chromosome = new ArrayList();
+       ArrayList x_blocks =new ArrayList();
+       ArrayList y_blocks = new ArrayList();
     //ArrayList xx = new ArrayList();
-    //ArrayList yy = new ArrayList();    
-      // Timer t=new Timer(1, this);
-        public p(){ 
-       addKeyListener((KeyListener) this); 
-        setFocusable(true);
-        setFocusTraversalKeysEnabled(true);
-   }
-
+    //ArrayList yy = new ArrayList();     
    public void paintComponent(Graphics d){
-       //if(q==0){super.paintComponent(d); }
-       super.paintComponent(d);
-       for(int i=0; i<12; i++){
-        for(int j=0; j<12; j++){
-             d.drawRect(40*i,40*j, 40,40);
-        }}
-       d.setColor(Color.blue);
-       for(int n=1; n<12; n++){
-             c=ran.nextInt(11);
-             v=ran.nextInt(11);
-       d.fillRect(c*40, v*40, 40, 40);
-       }
-       
-      d.setColor(Color.green);
-      d.fill3DRect(x,y, 40,40,true);
-      repaint(x,y, 40,40);
-       }
-   
+       if(count_paint != 0){  
+           try {
+               t.stop();
+               Thread.sleep(900);
+           } catch (InterruptedException ex) {
+               Logger.getLogger(p.class.getName()).log(Level.SEVERE, null, ex);
+           }}
+                 //  for(int i=0; i<1000000000; i++){}
+               super.paintComponent(d);
+               for(int i=0; i<12; i++){
+                   for(int j=0; j<12; j++){
+                       d.drawRect(40*i,40*j, 40,40);
+                   }}
+               
+               d.setColor(Color.blue);
+               for(int n=0; n<12; n++){
+                   if(count_paint == 0){
+                       c=ran.nextInt(11)*40;
+                       x_blocks.add(n, c);
+                       v=ran.nextInt(11)*40;
+                       y_blocks.add(n, v);
+                   }
+                   d.fillRect((int)x_blocks.get(n), (int)y_blocks.get(n), 40, 40);
+                   
+               }
+               d.setColor(Color.green);
+               d.fillRect(x,y, 40,40);
+               System.err.println(Chromosome);
+                t.start();
+             }
+
     @Override
     public void actionPerformed(ActionEvent e) {
-       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-         switch(q){
-             case 1:
-                y-=40;
-              break;
-           /* case 2:
-                y+=1;
-              break;*/
-            case 0:
-                x+=40;            
-               break;
-          /*  case 4:
-                x-=1;               
-              break;*/
-              }
-    }
-
-    @Override
-    public void keyTyped(KeyEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void keyPressed(KeyEvent e) {
+        q=ran.nextInt(2);
         Chromosome.add(q);
-        System.out.print(Chromosome);
-       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-       switch(e.getKeyCode()){
-            case KeyEvent.VK_UP:
-                y-=40;          q=1;
-               break;
-           /* case KeyEvent.VK_DOWN:
-                y+=0;          q=2;
-                break;*/
-            case KeyEvent.VK_RIGHT:
-                x+=40;          q=0;
-                break;
-           /* case KeyEvent.VK_LEFT:
-                x-=0;          q=4;
-                break;*/
-              }
-           
+        if(q == 1){y-=40;}
+        if(q == 0){x+=40;}
+        count_paint++;   repaint();   
+       // if(count_paint ==20){repaint(); }
     }
+   
 
-    @Override
-    public void keyReleased(KeyEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
+   
 }
