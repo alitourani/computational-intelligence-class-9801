@@ -1,7 +1,7 @@
 # Using Genetic Algorithm to model Chromosome Collision
 
 ## Team Members:
-Names (Student Numbers)
+- Mohammad Ali Al-Ashkar (94122681004)
 
 ## Descreption:
 To be Defined
