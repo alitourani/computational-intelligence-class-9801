@@ -1,4 +1,4 @@
-# Prediction of Stock Market using Random Forest Algorithm
+# Prediction of Stock Market using Artificial Neural Networks
 
 ## Team Members:
 - Sadra Samadi (9312268122)
