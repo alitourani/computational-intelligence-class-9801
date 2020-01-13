@@ -4,4 +4,4 @@
 - Mohammad Ali Al-Ashkar (94122681004)
 
 ## Descreption:
-To be Defined
+Routing and Chromosome generation using Genetic Algorithm
