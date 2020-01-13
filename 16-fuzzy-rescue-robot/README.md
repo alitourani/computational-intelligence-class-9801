@@ -1,7 +1,7 @@
 # Implementation of a Fuzzy Model for Rescue Robots
 
 ## Team Members:
-Names (Student Numbers)
+- Amirreza Panahi (94122611002)
 
 ## Descreption:
 To be Defined

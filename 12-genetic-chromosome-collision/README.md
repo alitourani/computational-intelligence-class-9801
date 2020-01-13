@@ -1,8 +1,7 @@
 # Using Genetic Algorithm to model Chromosome Collision
 
 ## Team Members:
- (94122681004) محمدعلی الاشقر
-
+- Mohammad Ali Al-Ashkar (94122681004)
 
 ## Descreption:
-پروژه من مسیر یابی وساخت کروموزوم - الگوریتم ژنیتیک
+Routing and Chromosome generation using Genetic Algorithm
