@@ -34,7 +34,7 @@ This repository is created to collect the final projects of the **Principles of 
 | 10 | Handwriting recognition using ANN | 950122680019, 950122680025, 950122681005, 950122680030, 950122680004 |
 | 11 | Implementing a Neural Network for Clustering | 95122615002, 9412261500, 94122611001, 9512268500 |
 | 12 | Using Genetic algorithm to model Chromosome collision | 94122681004 |
-| 13 | Prediction of stock market using ANNs | 9312268122, 94012269030 |
+| 13 | Prediction of stock market using ANNs | 9312268122, 94012269030, 94012269032 |
 | 14 | Implementation of a scoring game based on Genetic algorithm | 950122680080, 94122691005 |
 | 15 | Implementation of a Reinforcement Learning Neural Network to recognize particular fruits | 950122680009, 950122680007, 950122680026, 950122681022 |
 | 16 | Implementation of a fuzzy model for Rescuer robots | 94122611002 |
