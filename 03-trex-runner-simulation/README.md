@@ -1,4 +1,4 @@
-# Implementation of Graph Coloring using Greedy Algorithms
+# Simulation of T-REX Runner game based on Computational Intelligence algorithm
 
 ## Team Members:
 - Negin Banay Shahani (960122680031)
