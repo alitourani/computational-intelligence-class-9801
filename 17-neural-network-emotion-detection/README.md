@@ -6,4 +6,5 @@
 - Mahta Amraji (94012261101)
 
 ## Descreption:
-To be Defined
+The objective of our case study is to let the program find the polarity of
+the words retrieved from sentences.
