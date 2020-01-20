@@ -6,4 +6,11 @@
 - Mohammad Ziarati (94012269032)
 
 ## Descreption:
-To be Defined
+
+### Libs:
+* pandas
+* numpy
+* matplotlib
+* scikit-learn
+* keras
+* tensorflow
