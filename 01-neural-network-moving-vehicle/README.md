@@ -1,6 +1,6 @@
 # Moving vehicle simulation using ANNs
 
- ##Team Members:
+## Team Members:
  -Mehdi Pourtalebi (960122680036)
  -Pouria Pourbagheri (960122681006)
  -Alireza Ghorbani (9512268100)
