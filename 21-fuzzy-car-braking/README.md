@@ -6,4 +6,4 @@
 - Amir Moahammad Moradi (950122680024)
 
 ## Descreption:
-To be Defined
+Automatic Brake System Fuzzy Logic
