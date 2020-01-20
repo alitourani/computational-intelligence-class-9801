@@ -1,0 +1,99 @@
+<div class="container">
+  <h3>Add Clients</h3>
+  <form
+    form
+    [formGroup]="addClientsForm"
+    (ngSubmit)="addClients(addClientsForm.value)"
+  >
+    <mat-form-field>
+      <input
+        formControlName="quantity"
+        matInput
+        type="number"
+        min="1"
+        required
+        placeholder="Number of clients"
+      />
+    </mat-form-field>
+
+    <mat-form-field>
+      <input
+        formControlName="cpuUsage"
+        type="number"
+        min="0"
+        max="50"
+        matInput
+        placeholder="CPU usage"
+        required
+      />
+      <span matSuffix>%</span>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input
+        formControlName="ramUsage"
+        type="number"
+        min="1"
+        max="2000"
+        matInput
+        placeholder="Ram usage"
+        required
+      />
+      <span matSuffix>MB</span>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input
+        formControlName="hardUsage"
+        type="number"
+        min="1"
+        max="40000"
+        matInput
+        placeholder="Hard usage"
+        required
+      />
+      <span matSuffix>MB</span>
+    </mat-form-field>
+
+    <div class="buttons-container"> 
+      <button (click)="onCancel()" type="button" mat-button>Cancel</button>
+      <button
+        [disabled]="addClientsForm.invalid"
+        type="submit"
+        mat-raised-button
+        color="primary"
+      >
+        Add
+      </button>
+    </div>
+  </form>
+  <mat-divider></mat-divider>
+  <h3>Remove Clients</h3>
+  <form
+    [formGroup]="removeClientsForm"
+    (ngSubmit)="removeClients(removeClientsForm.value)"
+  >
+    <mat-form-field>
+      <input
+        formControlName="numberOfRemove"
+        required
+        type="number"
+        min="1"
+        matInput
+        placeholder="Number of clients"
+      />
+      <!-- <mat-hint>{{message.value.length}} / 24</mat-hint> -->
+    </mat-form-field>
+    <div class="buttons-container">
+      <button (click)="onCancel()" type="button" mat-button>Cancel</button>
+      <button
+        [disabled]="removeClientsForm.invalid"
+        type="submit"
+        mat-raised-button
+        color="warn"
+      >
+        Remove
+      </button>
+    </div>
+  </form>
+</div>

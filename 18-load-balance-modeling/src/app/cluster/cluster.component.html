@@ -1,0 +1,77 @@
+<div class="container">
+  <!-- <div class="settings-container">
+    <button mat-icon-button color="primary" (click)="updateCluster()">
+      <mat-icon>settings</mat-icon>
+    </button>
+
+    <button mat-icon-button color="primary" (click)="addServer()">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+  <div> -->
+    <!-- <p *ngFor="let server of clusterData?.servers | keyvalue"> -->
+    <!-- {{ server.key }} - {{ server.value.ram }}
+    </p> -->
+
+    <div class="details">
+      <button (click)="toggleStart()" mat-stroked-button>{{getStart()}} Cluster</button>
+      <button (click)="addServer()" mat-stroked-button>Add Server</button>
+      <div class="detail-container">
+        <span>{{ clusterData?.cpuCapacity / 100 }} Cores</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M10 2h-2v-2h2v2zm-8 12h-2v2h2v-2zm0-3h-2v2h2v-2zm0-3h-2v2h2v-2zm0-5c0-.551.448-1 1-1h4v-2h-4c-1.657 0-3 1.343-3 3v4h2v-4zm11-3h-2v2h2v-2zm3 0h-2v2h2v-2zm-3.33 11.61c0-.326-.214-.396-.539-.396h-.465v.793h.465c.327-.001.539-.07.539-.397zm-8.67-7.61h16v16h-16v-16zm10.042 8.596c0 .946.548 1.404 1.487 1.404.915 0 1.49-.457 1.49-1.404v-2.129h-.907v2.129c0 .478-.161.617-.583.617-.442 0-.583-.21-.583-.617v-2.129h-.904v2.129zm-3.283 1.331h.907v-1.173h.662c.788 0 1.225-.474 1.225-1.144 0-.68-.448-1.143-1.225-1.143h-1.569v3.46zm-3.738-1.717c0 1.01.646 1.79 1.702 1.79.824 0 1.447-.478 1.541-1.521h-.881c-.147 1.097-1.455.963-1.455-.268 0-.562.227-1.029.795-1.029.307 0 .576.186.633.573h.881c-.09-.922-.729-1.365-1.514-1.365-1.05-.001-1.702.786-1.702 1.82zm14.979.79h2v-2h-2v2zm-20 8v-4h-2v4c0 1.657 1.343 3 3 3h4v-2h-4c-.552 0-1-.449-1-1zm20 0c0 .551-.448 1-1 1h-4v2h4c1.657 0 3-1.343 3-3v-4h-2v4zm0-5h2v-2h-2v2zm0-6h2v-2h-2v2zm-1-10h-4v2h4c.552 0 1 .449 1 1v4h2v-4c0-1.657-1.343-3-3-3zm-13 24h2v-2h-2v2zm6 0h2v-2h-2v2zm-3 0h2v-2h-2v2z"
+          />
+        </svg>
+        <span>{{ clusterData?.cpuUtilization?.toPrecision(3) }}%</span>
+      </div>
+      <div class="detail-container">
+        <span>{{ clusterData?.ramCapacity }} MB</span>
+        <mat-icon>memory</mat-icon>
+        <span>{{ clusterData?.ramUtilization?.toPrecision(3) }}%</span>
+      </div>
+      <!-- <div>
+        <span>Clients</span>
+        <mat-icon>computer</mat-icon>
+        <span>{{ calcNumberOfClients() }}</span>
+      </div> -->
+      <!-- {{numberOfServers}} -->
+      <div class="detail-container">
+        <span>{{ clusterData?.hardCapacity / 1000 }} GB</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M18.516 18.448c1.648 1.946-1.365 3.802-2.292 1.451-.425-1.081-1.438-3.76-1.69-4.434-.313-.833.499-1.25 1.012-.557.34.459 2.263 2.706 2.97 3.54zm3.484-18.448v24h-20v-24h20zm-2 2h-16v20h1v-1.5c0-.276.224-.5.5-.5s.5.224.5.5v1.5h1v-1.5c0-.276.224-.5.5-.5s.5.224.5.5v1.5h1v-1.5c0-.276.224-.5.5-.5s.5.224.5.5v1.5h10v-20zm-8 7c-.551 0-1 .449-1 1s.449 1 1 1 1-.449 1-1-.449-1-1-1zm0-6c3.866 0 7 3.134 7 7 0 1.956-.804 3.723-2.098 4.993-.262-.314-.47-.569-.554-.682-.354-.478-.861-.753-1.391-.753-.485 0-.939.237-1.215.635-.311.449-.364 1.041-.145 1.623l.341.906c-.616.177-1.265.278-1.938.278-3.866 0-7-3.134-7-7s3.134-7 7-7zm-2.5 2.836c.656-.396 1.374-.605 2.091-.65l.12-.777c-.893.028-1.79.276-2.609.771-.818.492-1.455 1.171-1.897 1.947l.744.257c.374-.613.893-1.15 1.551-1.548zm.794 1.318c.334-.201.692-.324 1.056-.387l.121-.792c-.54.057-1.077.22-1.575.521-.496.3-.89.698-1.193 1.149l.756.264c.226-.293.501-.553.835-.755zm3.706 2.846c0-1.105-.895-2-2-2s-2 .895-2 2 .895 2 2 2 2-.895 2-2z"
+          />
+        </svg>
+        <span>{{ clusterData?.hardUtilization?.toPrecision(3) }}%</span>
+      </div>
+      <button (click)="deleteCluster()" mat-stroked-button>Delete Cluster</button>
+      <button (click)="updateCluster()" mat-stroked-button>Modify Cluster</button>
+    </div>
+    <!-- {{ clusterData?.cpuCapacity }}
+    {{ clusterData?.hardCapacity }}
+    {{ clusterData?.ramCapacity }}
+
+    {{ clusterData?.cpuUtilization }}
+    {{ clusterData?.hardUtilization }}
+    {{ clusterData?.ramUtilization }} -->
+
+    <div class="servers-container">
+      <app-server
+        *ngFor="let server of clusterData?.servers | keyvalue"
+        [id]="server.key"
+        [info]="server.value"
+        [clusterId]="clusterId"
+      ></app-server>
+    </div>
+  </div>

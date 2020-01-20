@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+  .settings-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+  .servers-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    app-server {
+      margin: 16px;
+    }
+  }
+  .details {
+    display: flex;
+    justify-content: space-evenly;
+    .detail-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 12px;
+      mat-icon,
+      svg {
+        padding: 4px 0;
+        width: 30px;
+        height: 30px;
+        font-size: 30px;
+      }
+    }
+  }
+}

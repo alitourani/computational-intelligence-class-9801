@@ -1,0 +1,52 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  .top {
+    display: flex;
+    justify-content: space-between;
+    .buttons-container {
+      display: flex;
+      flex-direction: column;
+      // justify-content: ;
+    }
+
+  }
+  .computer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 0;
+
+    svg {
+      font-size: 56px;
+      height: 56px;
+      width: 56px;
+      padding: 8px;
+    }
+    .sender {
+      fill: red;
+    }
+    .rec {
+      fill: green;
+    }
+  }
+  .details {
+    display: flex;
+    justify-content: space-evenly;
+    > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 12px;
+      mat-icon,
+      svg {
+        padding: 4px 0;
+        width: 30px;
+        height: 30px;
+        font-size: 30px;
+      }
+    }
+  }
+}
