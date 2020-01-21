@@ -29,7 +29,7 @@ This repository is created to collect the final projects of the **Principles of 
 | 5 | Weather forecasting using ANNs | 950122680008, 950122680020, 950122681008 |
 | 6 | ADALINE Neural Network implementation | 950122680083, 950122680014 |
 | 7 | Employing Bat algorithm to solve an applicable issue | 960122681014, 960122610003, 9612268200, 950122610018 |
-| 8 | N/A | 960122680106, 9312268103 |
+| 8 | Titanic Ship Survivers Issue using ANNs | 9312268103 |
 | 9 | Image Segmentation using ANN | 94012269026, 9412261200, 94012269025 |
 | 10 | Handwriting recognition using ANN | 950122680019, 950122680025, 950122681005, 950122680030, 950122680004 |
 | 11 | Implementing a Neural Network for Clustering | 95122615002, 9412261500, 94122611001, 9512268500 |
