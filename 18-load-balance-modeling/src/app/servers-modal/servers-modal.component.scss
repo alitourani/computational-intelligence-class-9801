@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    form {
+        display: flex;
+        flex-direction: column;
+        min-width: 320px;
+    }
+    .buttons-container {
+        display: flex;
+        button {
+            flex: 1;
+        }
+    }
+}

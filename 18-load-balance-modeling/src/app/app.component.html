@@ -1,0 +1,91 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<!-- <button (click)="update()">update</button>
+
+     <div>{{ (clusters | async) | json  }}</div>
+     <mat-slider min="1" max="100" step="1" value="1"></mat-slider> -->
+<!-- <mat-toolbar color="primary">
+  <button
+    (click)="sidenav.toggle()"
+    mat-icon-button
+    aria-label="Example icon-button with a heart icon"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span class="example-fill-remaining-space"></span>
+
+  <span>My Application</span>
+</mat-toolbar>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav mode="side" opened>
+     <button mat-button color="primary">Primary</button>
+  </mat-sidenav>
+  <mat-sidenav-content>
+       <div>hello</div>>
+     </mat-sidenav-content>
+</mat-sidenav-container>
+
+<router-outlet></router-outlet> -->
+<!-- <div id="container"> -->
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button (click)="sidenav.toggle()" mat-icon-button>
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1>Load-Balance Simulation Using Fuzzy Logic</h1>
+    <span class="menu-spacer"></span>
+    <div>
+      <!-- <button mat-button color="primary">Primary</button> -->
+    </div>
+  </mat-toolbar-row>
+
+  <!-- <mat-toolbar-row>
+    <span style="font-size: 12px;"
+      >SimpleCRM helps you easily manage your contacts</span
+    >
+  </mat-toolbar-row> -->
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="side" opened>
+    <mat-nav-list>
+      <!-- <mat-action-list>
+        <mat-icon color="primary">add</mat-icon>
+        <span color="primary">Create New Cluster</span>
+      </mat-action-list> -->
+      <!-- <a class="add-cluster" mat-list-item (click)="sidenav.toggle()" href="">
+       </a
+      > -->
+      <a (click)="openDialog()" class="add-cluster" mat-list-item>
+        <mat-icon color="primary">add</mat-icon>
+        <span color="primary">Create New Cluster</span>
+      </a>
+      <a
+        *ngFor="let cluster of clustersInfo | async"
+        mat-list-item
+        [routerLink]="'clusters/'+cluster.id"
+        routerLinkActive="active-route"
+        >{{ cluster.name }}</a
+      >
+      <!-- <a mat-list-item [routerLink]="'/accounts'"> New York </a>
+      <a mat-list-item [routerLink]="'/create-account'"> Paris </a>
+      <a mat-list-item [routerLink]="'/contacts'"> Tehran </a>
+      <a mat-list-item [routerLink]="'/create-contact'"> Toronto </a>
+      <a mat-list-item [routerLink]="'/activities'"> Sydney </a>
+      <a mat-list-item [routerLink]="'/create-activity'"> Frankfurt </a> -->
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<!-- </div> -->

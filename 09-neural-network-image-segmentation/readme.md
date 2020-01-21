@@ -1,11 +1,4 @@
-# Image Segmentation using Artificial Neural Networks
-
-## Team Members:
-- Mohaddeseh Bibak (94012269026)
-- Zahra Ghanbarpour (9412261200)
-- Atefeh Bezhkool (94012269025)
-
-## Descreption:
+# Image segmentation using tensorflow
 Images are represented by a matrix of RGB values which is same
 as a 3D matrix of **_height_**x**_width_**x**_3_**.
 Segmetation is to create an output of same height and width asigning
