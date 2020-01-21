@@ -1,0 +1,66 @@
+<div class="container">
+  <h3>Add a New Server</h3>
+  <form [formGroup]="serverForm" (ngSubmit)="onSubmit(serverForm.value)">
+    <mat-form-field>
+      <input
+        formControlName="name"
+        required
+        type="text"
+        matInput
+        maxlength="24"
+        placeholder="Server name"
+      />
+      <!-- <mat-hint>{{message.value.length}} / 24</mat-hint> -->
+    </mat-form-field>
+
+    <mat-form-field>
+      <input
+        formControlName="cpu"
+        type="number"
+        min="1"
+        max="64"
+        matInput
+        placeholder="Number of CPU cores"
+        required
+      />
+      <!-- <span matSuffix>miliseconds</span> -->
+    </mat-form-field>
+
+    <mat-form-field>
+      <input
+        formControlName="ram"
+        type="number"
+        min="1000"
+        max="64000"
+        matInput
+        placeholder="Ram capacity"
+        required
+      />
+      <span matSuffix>MB</span>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input
+        formControlName="hard"
+        type="number"
+        min="500"
+        max="100000"
+        matInput
+        placeholder="Hard capacity"
+        required
+      />
+      <span matSuffix>GB</span>
+    </mat-form-field>
+    <div class="buttons-container">
+      <button (click)="onCancel()" type="button" mat-button>Cancel</button>
+      <button
+        [disabled]="serverForm.invalid"
+        type="submit"
+        mat-raised-button
+        color="primary"
+      >
+        {{ type }}
+      </button>
+    </div>
+  </form>
+</div>

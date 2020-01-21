@@ -1,0 +1,43 @@
+<div class="container">
+  <h3>{{getTitle()}}</h3>
+  <!-- <h3>Create A New Cluster</h3> -->
+  <form
+    [formGroup]="createClusterForm"
+    (ngSubmit)="onSubmit(createClusterForm.value)"
+  >
+    <mat-form-field>
+      <input
+        formControlName="name"
+        [(value)]="name"
+        required
+        type="text"
+        matInput
+        maxlength="24"
+        placeholder="Cluster name"
+      />
+      <!-- <mat-hint>{{message.value.length}} / 24</mat-hint> -->
+    </mat-form-field>
+
+    <label>Sensitivity</label>
+    <mat-slider min="0" max="0.95" step="0.01" [(value)]="sens"></mat-slider>
+
+    <label>Load-Balance delay</label>
+    <mat-slider min="0" max="500" step="5" [(value)]="delay"></mat-slider>
+
+    <!-- <mat-form-field>
+        <input type="number" value="0" min="0" max="1000" matInput placeholder="Load-Balance delay">
+        <span matSuffix>miliseconds</span>
+    </mat-form-field> -->
+    <div class="buttons">
+      <button (click)="onCancel()" type="button" mat-button>Cancel</button>
+      <button
+        [disabled]="createClusterForm.invalid"
+        type="submit"
+        mat-raised-button
+        color="primary"
+      >
+        {{ type }}
+      </button>
+    </div>
+  </form>
+</div>
