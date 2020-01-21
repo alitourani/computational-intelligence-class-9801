@@ -72,7 +72,10 @@ export class ServersModalComponent implements OnInit {
         hardUtilization: 0,
         clients: [],
         load: 0,
-        status: 0
+        status: 0,
+        fuzzyLoad: [0, 0, 0, 0, 0],
+        fuzzyOutput: [0, 0, 0],
+        loadMinusAverage: [0, 0, 0, 0, 0]
       });
     }
 

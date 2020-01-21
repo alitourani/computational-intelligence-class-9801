@@ -20,8 +20,8 @@ export class ClusterComponent implements OnInit {
   clusterId;
   clusterInfo;
   clusterData;
-  numberOfServers = 0;
-  start: boolean = false;
+  // numberOfServers = 0;
+  // start: boolean = false;
   constructor(
     private route: ActivatedRoute,
     private db: AngularFireDatabase,
@@ -38,9 +38,9 @@ export class ClusterComponent implements OnInit {
         .object(`clusters/${this.clusterId}`)
         .valueChanges();
       this.clusterInfo.subscribe(data => {
-        this.calcNumberOfServers();
+        // this.calcNumberOfServers();
         this.clusterData = data;
-        if (data.active && this.start) {
+        if (data.active) {
           worker.postMessage(data);
         }
         // console.log(this.clusterData)
@@ -83,36 +83,36 @@ export class ClusterComponent implements OnInit {
     this.db.object(`clustersInfo/${this.clusterId}`).remove();
   }
 
-  calcNumberOfServers() {
-    if (this.clusterInfo.hasOwnProperty("servers")) {
-      this.numberOfServers = Object.keys(this.clusterInfo.servers).length;
-    } else {
-      this.numberOfServers = 0;
-    }
-  }
+  // calcNumberOfServers() {
+  //   if (this.clusterInfo.hasOwnProperty("servers")) {
+  //     this.numberOfServers = Object.keys(this.clusterInfo.servers).length;
+  //   } else {
+  //     this.numberOfServers = 0;
+  //   }
+  // }
 
   ngOnDestroy() {
     this.clusterInfo.unsubscribe();
     worker.terminate();
   }
 
-  toggleStart() {
-    this.start = !this.start;
-    if (this.start) {
-      worker.postMessage(this.clusterData);
+  // toggleStart() {
+    // this.start = !this.start;
+    // if (this.start) {
+      // worker.postMessage(this.clusterData);
       // this.clusterData
-    }
+    // }
     // if (!this.clusterData.active && this.start) {
     //   this.db.object(`clusters/${this.clusterId}`).update({
     //     active: true
     //   });
     // }
-  }
-  getStart() {
-    if (this.start) {
-      return "Stop";
-    } else {
-      return "Start";
-    }
-  }
+  // }
+  // getStart() {
+  //   if (this.start) {
+  //     return "Stop";
+  //   } else {
+  //     return "Start";
+  //   }
+  // }
 }

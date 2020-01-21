@@ -69,6 +69,7 @@ type status = -1 | 0 | 1;
 
 export function calServerUtilization(server: Server): Server {
   // console.log(server);
+  console.log(server);
   let totalRamUsage: number = 0;
   let totalCpuUsage: number = 0;
   let totalHardUsage: number = 0;
@@ -99,6 +100,7 @@ export function calServerUtilization(server: Server): Server {
   server.ramUtilization = (totalRamUsage / server.ram) * 100;
   server.cpuUtilization = (totalCpuUsage / server.cpu) * 100;
   server.hardUtilization = (totalHardUsage / server.hard) * 100;
+  console.log(server);
   return server;
 }
 
@@ -267,56 +269,63 @@ export function calcServerFuzzyLoad(server: Server): Server {
 }
 
 export function calcFuzzyOutput2(cluster: Cluster): Cluster {
-  let average = cluster.fuzzyLoad;
-  let servers = cluster.servers;
+  // let average = cluster.fuzzyLoad;
+  // let servers = cluster.servers;
   // let loadMinusAverage;
-  for (let key in servers) {
-    let load = servers[key].fuzzyLoad;
-    let loadMinusAverage : fuzzyLoad = [0, 0, 0, 0, 0];
+  for (let key in cluster.servers) {
+    let load = cluster.servers[key].fuzzyLoad;
+    let loadMinusAverage: fuzzyLoad = [0, 0, 0, 0, 0];
     for (let i = 0; i < load.length; i++) {
       // loadMinusAverage.push(load[i] - average[i]);
-      loadMinusAverage[i] = load[i] - average[i];
+      loadMinusAverage[i] = load[i] - cluster.fuzzyLoad[i];
     }
-    servers[key].loadMinusAverage = loadMinusAverage;
+    cluster.servers[key].loadMinusAverage = loadMinusAverage;
   }
-  for (let key in servers) {
+
+  for (let key in cluster.servers) {
+    if (cluster.servers[key].loadMinusAverage == [0, 0, 0, 0, 0]) {
+      cluster.servers[key].fuzzyOutput = [0, 0, 0];
+      return cluster;
+    }
     let r = 0;
     let n = 0;
     let s = 0;
-    for (let i = 0; i < servers[key].loadMinusAverage.length; i++) {
-
-      if (servers[key].loadMinusAverage[i] < 0) {
-        servers[key].fuzzyOutput = loadIsMore(servers[key].loadMinusAverage);
+    for (let i = 0; i < cluster.servers[key].loadMinusAverage.length; i++) {
+      if (cluster.servers[key].loadMinusAverage[i] < 0) {
+        cluster.servers[key].fuzzyOutput = loadIsMore(
+          cluster.servers[key].loadMinusAverage
+        );
         break;
-      } else if (servers[key].loadMinusAverage[i] > 0) {
-        servers[key].fuzzyOutput = loadIsLess(servers[key].loadMinusAverage);
+      } else if (cluster.servers[key].loadMinusAverage[i] > 0) {
+        cluster.servers[key].fuzzyOutput = loadIsLess(
+          cluster.servers[key].loadMinusAverage
+        );
         break;
       }
     }
-
-
   }
+  // cluster.
   return cluster;
 }
 
 function loadIsMore(input): fuzzyOutput {
   let s = 0;
-  for(let i = 0; i < input.length; i++) {
-    if(input[i] > 0) {
-      s = s + input[i]
+  for (let i = 0; i < input.length; i++) {
+    if (input[i] > 0) {
+      s = s + input[i];
     }
   }
-  return [0, 1 - s, s]
+  return [0, 1 - s, s];
 }
 
 function loadIsLess(input): fuzzyOutput {
   let r = 0;
-  for(let i = 0; i < input.length; i++) {
-    if(input[i] > 0) {
-      r = r + input[i]
+  for (let i = 0; i < input.length; i++) {
+    if (input[i] > 0) {
+      r = r + input[i];
     }
   }
-  return [r, 1 - r, 0]
+  return [r, 1 - r, 0];
 }
 
 export function calcFuzzyOutput(cluster: Cluster): Cluster {
@@ -539,22 +548,22 @@ export function calcOutput(cluster: Cluster): Cluster {
   let senderKey = "";
   let receiverKey = "";
 
-
   for (let key in servers) {
     servers[key].status = 0;
-    if (servers[key].hasOwnProperty("fuzzyOutput")) {
-      if (servers[key].fuzzyOutput[0] > maxReceiver) {
-        maxReceiver = servers[key].fuzzyOutput[0];
-        receiverKey = key;
-      }
-      if (servers[key].fuzzyOutput[2] > maxSender) {
-        maxSender = servers[key].fuzzyOutput[2];
-        senderKey = key;
-      }
-    } else {
-      break;
+    // if (servers[key].hasOwnProperty("fuzzyOutput")) {
+    if (servers[key].fuzzyOutput[0] >= maxReceiver) {
+      maxReceiver = servers[key].fuzzyOutput[0];
+      // console.log(key);
+      receiverKey = key;
     }
-
+    if (servers[key].fuzzyOutput[2] >= maxSender) {
+      maxSender = servers[key].fuzzyOutput[2];
+      senderKey = key;
+    }
+    // }
+    // else {
+    //   break;
+    // }
   }
 
   //   for (let i = 0; i < servers.length; i++) {
@@ -580,16 +589,21 @@ export function calcOutput(cluster: Cluster): Cluster {
     return cluster;
   } else {
     // if (typeof Worker !== 'undefined')
-    if (typeof servers[senderKey] === 'undefined' || servers[receiverKey] === 'undefined') {
+    // if (typeof servers[senderKey] === 'undefined' || servers[receiverKey] === 'undefined') {
+    //   return cluster;
+    // } else {
+    // if (receiverKey == "" || senderKey == "") {
+    //   return cluster;
+    // }
+    if (senderKey === receiverKey) {
       return cluster;
-    } else {
-      servers[senderKey].status = 1;
-      servers[receiverKey].status = -1;
-      cluster.senderKey = senderKey;
-      cluster.receiverKey = receiverKey;
-      cluster.active = true;
     }
-
+    servers[senderKey].status = 1;
+    servers[receiverKey].status = -1;
+    cluster.senderKey = senderKey;
+    cluster.receiverKey = receiverKey;
+    cluster.active = true;
+    // }
 
     // let clusterStatus: Array<status> = [];
 

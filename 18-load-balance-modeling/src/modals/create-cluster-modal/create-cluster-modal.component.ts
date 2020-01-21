@@ -42,13 +42,25 @@ export class CreateClusterModalComponent implements OnInit {
     let pushId = this.db.createPushId();
     this.db.list("clustersInfo").set(pushId, {
       id: pushId,
-      name: data.name
+      name: data.name,
     });
     this.db.list("clusters").set(pushId, {
       id: pushId,
       name: data.name,
       sens: data.sens,
-      delay: data.delay
+      delay: data.delay,
+      active: false,
+      ramCapacity: 0,
+      cpuCapacity: 0,
+      hardCapacity: 0,
+      ramUsage: 0,
+      cpuUsage: 0,
+      hardUsage: 0,
+      ramUtilization: 0,
+      cpuUtilization: 0,
+      hardUtilization: 0,
+      load: 0,
+      fuzzyLoad: [0, 0, 0, 0, 0],
     });
     // this.db.object(`clusters/${pushId}`).update({
     //   active: true
