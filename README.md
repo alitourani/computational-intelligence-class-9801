@@ -3,7 +3,7 @@
 This repository is created to collect the final projects of the **Principles of Computational Intelligence** course, presented at the Department of Computer Engineering of the University of Guilan. Accordingly, the repository contains implementations of Computational Intelligence Algorithms to solve some basic issues.
 
 ## Class Information
-- **Associated Term:** Fall 2019
+- **Associated Term:** Fall 2019-2020
 - **Instructor:** Ali Tourani
 - **Teacher Assistant:** N/A
 - **Credits:** 3.0
