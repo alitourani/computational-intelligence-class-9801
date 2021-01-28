@@ -1,26 +1,25 @@
-# Computational Intelligence Algorithms
+# Computational Intelligence 9801 (Fall 2019)
 
-This repository is created to collect the final projects of the **Principles of Computational Intelligence** course, presented at the Department of Computer Engineering of the University of Guilan. Accordingly, the repository contains implementations of Computational Intelligence Algorithms to solve some basic issues.
+This page contains the course materials and final projects, developed at the **University of Guilan** for **Computational Intelligence** course (code 12262111) in **Fall 2019** semester. The course presents an introduction to the methods and algorithms of Computational Intelligence, and focuses on the functional concepts and applicable approaches. The topics covered in this course include Soft Computing, Artificial Neural Networks (ANNs), Fuzzy logic, Evolutionary Computation, and Swarm Intelligence. It also discusses the structures of well-known CI methods, such as Ant Colony, Genetic Algorithm, Perceptron Network, and Deep Learning.
 
-## Class Information
-- **Associated Term:** Fall 2019-2020
-- **Instructor:** Ali Tourani
-- **Teacher Assistant:** N/A
-- **Credits:** 3.0
+## 📚 Course Contents
 
-
-## Course Contents
-- Introduction to C.I. and Soft Computing
+- Introduction to Computational Intelligence and Soft Computing
 - Artificial Neural Networks
 - Cluster Analysis
-- Fuzzy Logic
+- Fuzzy Logic and Calculations
 - Evolutionary Computation
-- Hybrid Intelligent Methods
 
-****Note: get access to the presentation slides through [this link.](http://alitourani.ir/downloadable-files/ "this link.")****
+## 👨‍🏫 Administrative
 
-## Project Titles
-| Group Name | Title | Team Members |
+- **Instructor:** [Ali Tourani](http://alitourani.ir/downloadable-files/ "Ali Tourani")
+- **Credits:** 3
+- **Time**: Wednesdays, 15:30 – 17:00, 17:15 – 18:30
+- **Location**: Faculty of Engineering, Class #23
+
+## 🔨 Project Titles
+
+| # | Project title | Member(s) |
 | ------------ | ------------ | ------------ |
 | 1 | Moving vehicle simulation using ANNs | 960122680036, 960122681006, 9512268100, 960122680076 |
 | 2 | Real-time prediction of age and gender based on ANN | 950122680027, 950122680028, 950122680037, 950122681011 |
@@ -48,10 +47,3 @@ This repository is created to collect the final projects of the **Principles of 
 | 24 | Utilizng an ANN for Tic-Tac-Toe game | 960122680019, 960122680022, 960122681012, 960122680117 |
 | 25 | A fuzzy system to control light in smart homes | 9512268200, 95122681001 |
 | 26 | A Python framework for Genetic Algorithm phases | 94012269015, 94012261011 |
-
-## Implementation Environments
-Projects should be implemented using one of the below programming languages:
-- Python
-- C++
-- C#
-- Java
