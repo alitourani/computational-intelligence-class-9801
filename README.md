@@ -12,7 +12,7 @@ This page contains the course materials and final projects, developed at the **U
 
 ## 👨‍🏫 Administrative
 
-- **Instructor:** [Ali Tourani](http://alitourani.ir/downloadable-files/ "Ali Tourani")
+- **Instructor:** [Ali Tourani](http://alitourani.ir/course-material/ "Ali Tourani")
 - **Credits:** 3
 - **Time**: Wednesdays, 15:30 – 17:00, 17:15 – 18:30
 - **Location**: Faculty of Engineering, Class #23
